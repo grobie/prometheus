@@ -1,0 +1,31 @@
+// Copyright 2013 Prometheus Team
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+package format
+
+import (
+	"github.com/matttproud/prometheus/retrieval"
+	"io"
+)
+
+var (
+	Processor001 Processor = &processor001{}
+)
+
+// processor001 is responsible for handling API version 0.0.1.
+type processor001 struct {
+}
+
+func (p *processor001) Process(stream io.ReadCloser, results chan retrieval.Result) (err error) {
+	return
+}
